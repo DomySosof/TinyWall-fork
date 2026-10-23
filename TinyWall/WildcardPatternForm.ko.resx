@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="$this.Text" xml:space="preserve"><value>와일드카드 패턴 설정 - TinyWall</value></data>
+  <data name="lblOriginalPath.Text" xml:space="preserve"><value>원래 경로:</value></data>
+  <data name="lblPattern.Text" xml:space="preserve"><value>와일드카드 패턴:</value></data>
+  <data name="lblHints.Text" xml:space="preserve"><value>참고:
+- 허용되는 와일드카드: ? (단일 문자), * (여러 문자)
+- 와일드카드는 디렉터리 구분 기호와 일치할 수 없습니다.
+- Program Files 외부의 파일이 와일드카드 패턴과 일치하려면 디지털 서명이 필요합니다.
+- 패턴은 로컬 컴퓨터의 절대 파일 경로를 나타내야 합니다.</value></data>
+  <data name="btnCancel.Text" xml:space="preserve"><value>취소</value></data>
+</root>

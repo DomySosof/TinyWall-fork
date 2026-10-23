@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="{22AC30B4-4943-4019-9C79-60E8C33E26BC}" Codepage="1252" Language="1033" Manufacturer="Károly Pados" Name="TinyWall" UpgradeCode="{0D009F71-BB22-4962-AEE0-6D42FA952B84}" Version="3.6.1.0">
+        <Package Comments="This installer database contains the logic and data required to install TinyWall." Compressed="yes" Description="A non-intrusive firewall solution." InstallerVersion="301" Languages="1033" Manufacturer="Károly Pados" Platform="x86" SummaryCodepage="1250" />
+        <Condition Message="This application requires .NET Framework 4.8 to be installed.">WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED</Condition>
+        <Condition Message="This application requires Windows 10 version 21H2 (build 19044) or newer.">Installed OR (WINDOWSBUILDNUMBER &gt;= 19044)</Condition>
+        <CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" />
+        <CustomAction Id="FoundIncompatibleVersion" Error="An older version of TinyWall is installed that cannot be automatically updated. Please uninstall the existing version first, then try again." />
+        <CustomAction Id="FoundNewerVersion" Error="A newer version of TinyWall is already installed. Installation cannot continue." />
+        <CustomAction Id="InstallCustom" FileKey="TinyWallEXE" ExeCommand="/install" Execute="commit" Impersonate="no" />
+        <CustomAction Id="InstallCustomRollback" FileKey="TinyWallEXE" ExeCommand="/uninstall" Execute="rollback" Impersonate="no" />
+        <CustomAction Id="UninstallCustom" FileKey="TinyWallEXE" ExeCommand="/uninstall" Execute="deferred" Impersonate="no" />
+        <CustomAction Id="StartControllerAndDetect" FileKey="TinyWallEXE" ExeCommand="/autowhitelist" Return="asyncNoWait" Execute="commit" />
+        <CustomAction Id="StartController" FileKey="TinyWallEXE" ExeCommand="" Return="asyncNoWait" Execute="commit" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="ProgramFiles" ShortName="hf8yxqrb">
+                <Directory Id="INSTALLDIR" Name="TinyWall">
+                    <Component Id="MainExecutable" Guid="{D0A4DEC7-42C7-48F1-912D-76A4B33AC644}">
+                        <File Id="TinyWallEXE" Name="TinyWall.exe" KeyPath="yes" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\TinyWallEXE" />
+                    </Component>
+                    <Component Id="MainExecutableConfig" Guid="{81CD5E43-FAE3-4B3C-AA84-A7A0C660FDB4}">
+                        <File Id="TinyWallCONFIG" Name="TinyWall.exe.config" KeyPath="yes" ShortName="hv2s3n01.con" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\TinyWallCONFIG" />
+                    </Component>
+                    <Component Id="Microsoft_Bcl_AsyncInterfaces_Lib" Guid="{A7FB0F34-9995-43BC-B415-65AAF3AA37A3}">
+                        <File Id="Microsoft_Bcl_AsyncInterfaces_dll" Name="Microsoft.Bcl.AsyncInterfaces.dll" KeyPath="yes" ShortName="hcoydupi.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\Microsoft_Bcl_AsyncInterfaces_dll" />
+                    </Component>
+                    <Component Id="System_Buffers_Lib" Guid="{A1797893-28F9-4D81-9BAF-E7508B04D119}">
+                        <File Id="System_Buffers_dll" Name="System.Buffers.dll" KeyPath="yes" ShortName="zsqgsvb2.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Buffers_dll" />
+                    </Component>
+                    <Component Id="System_Memory_Lib" Guid="{0A4C05A5-D37A-419D-B85A-0938F34B43D0}">
+                        <File Id="System_Memory_dll" Name="System.Memory.dll" KeyPath="yes" ShortName="ho5l4mbc.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Memory_dll" />
+                    </Component>
+                    <Component Id="System_Numerics_Vectors_Lib" Guid="{8B1979B5-8755-4FF2-8635-9C0CAB71073C}">
+                        <File Id="System_Numerics_Vectors_dll" Name="System.Numerics.Vectors.dll" KeyPath="yes" ShortName="_qqxhiqd.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Numerics_Vectors_dll" />
+                    </Component>
+                    <Component Id="System_Runtime_CompilerServices_Unsafe_Lib" Guid="{F3DBEFD2-E80A-40E1-9BEB-79080B47508F}">
+                        <File Id="System_Runtime_CompilerServices_Unsafe_dll" Name="System.Runtime.CompilerServices.Unsafe.dll" KeyPath="yes" ShortName="brrbscyk.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Runtime_CompilerServices_Unsafe_dll" />
+                    </Component>
+                    <Component Id="System_Text_Encodings_Web_Lib" Guid="{FA88A627-F2E3-47BF-A245-79B72D91F448}">
+                        <File Id="System_Text_Encodings_Web_dll" Name="System.Text.Encodings.Web.dll" KeyPath="yes" ShortName="qnrlwr4p.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Text_Encodings_Web_dll" />
+                    </Component>
+                    <Component Id="System_Text_Json_Lib" Guid="{87A21FAA-7ED7-4383-89B1-720EC6AFF3B8}">
+                        <File Id="System_Text_Json_dll" Name="System.Text.Json.dll" KeyPath="yes" ShortName="lcscjzsp.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Text_Json_dll" />
+                    </Component>
+                    <Component Id="System_Threading_Tasks_Extensions_Lib" Guid="{D2B40BC4-0B98-4F07-AA93-E0AFC0405789}">
+                        <File Id="System_Threading_Tasks_Extensions_dll" Name="System.Threading.Tasks.Extensions.dll" KeyPath="yes" ShortName="fs04ttzo.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_Threading_Tasks_Extensions_dll" />
+                    </Component>
+                    <Component Id="System_ValueTuple_Lib" Guid="{1335CC77-A532-4F69-9811-FF9C83A7A01B}">
+                        <File Id="System_ValueTuple_dll" Name="System.ValueTuple.dll" KeyPath="yes" ShortName="hq11ix1p.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\System_ValueTuple_dll" />
+                    </Component>
+                    <Component Id="License" Guid="{2F2FF77C-8900-406A-AB6E-6DCFF4B53463}">
+                        <File Id="LicenseRTF" Name="License.rtf" KeyPath="yes" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LicenseRTF" />
+                    </Component>
+                    <Component Id="RegistryKeys" Guid="{85FFE113-2363-4EF9-AAA4-05F522907839}">
+                        <RegistryKey Id="RegInstallDir" ForceDeleteOnUninstall="yes" Key="Software\TinyWall" Root="HKLM" />
+                        <RegistryValue Id="regCCFBB5046BEAAAAE1BFF864D74F76CA4" Root="HKLM" Key="Software\TinyWall" Name="InstallDir" Value="[INSTALLDIR]" Type="string" KeyPath="yes" />
+                    </Component>
+                    <Directory Id="LOCDIR_bg" Name="bg">
+                        <Component Id="LocSatelliteLib_bg" Guid="{ED49577C-871B-4AA4-81D7-E4B879237DBB}">
+                            <File Id="LocSatelliteDLL_bg" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="kiqll8mw.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_bg" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_es" Name="es">
+                        <Component Id="LocSatelliteLib_es" Guid="{164A848E-99AB-4FF3-BFEE-400B0C43E9B0}">
+                            <File Id="LocSatelliteDLL_es" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="wja0pvvc.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_es" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_cs" Name="cs">
+                        <Component Id="LocSatelliteLib_cs" Guid="{9C7D2237-46B9-4D91-AC54-92C9B6545B37}">
+                            <File Id="LocSatelliteDLL_cs" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="ohm5xdfv.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_cs" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_heIL" Name="he-IL">
+                        <Component Id="LocSatelliteLib_heIL" Guid="{8B0B0122-4BEF-45CD-BA18-49F200FB1444}">
+                            <File Id="LocSatelliteDLL_heIL" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="pb-wclh-.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_heIL" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_hu" Name="hu">
+                        <Component Id="LocSatelliteLib_hu" Guid="{B976793E-5A50-42A6-8164-DC1337862A0F}">
+                            <File Id="LocSatelliteDLL_hu" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="eczvfflj.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_hu" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_fr" Name="fr">
+                        <Component Id="LocSatelliteLib_fr" Guid="{C5A9E9ED-2298-461B-8EFC-536717B2EC57}">
+                            <File Id="LocSatelliteDLL_fr" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="rsou7jdl.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_fr" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_ja" Name="ja">
+                        <Component Id="LocSatelliteLib_ja" Guid="{35185D2D-D623-4174-92A9-ECB743C4B712}">
+                            <File Id="LocSatelliteDLL_ja" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="kq-n25ow.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_ja" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_de" Name="de">
+                        <Component Id="LocSatelliteLib_de" Guid="{F7BC44A5-6433-4CA9-9FD2-C820EE506A1D}">
+                            <File Id="LocSatelliteDLL_de" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="v7eimi9s.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_de" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_nl" Name="nl">
+                        <Component Id="LocSatelliteLib_nl" Guid="{DE072136-DEC8-4020-8FE8-0F41B04A65ED}">
+                            <File Id="LocSatelliteDLL_nl" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="ca9z_aw0.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_nl" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_ko" Name="ko">
+                        <Component Id="LocSatelliteLib_ko" Guid="{91FD1C6A-3F94-4926-9C7D-27190A191F13}">
+                            <File Id="LocSatelliteDLL_ko" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="wjchwxh3.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_ko" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_pl" Name="pl">
+                        <Component Id="LocSatelliteLib_pl" Guid="{92858D12-E2A8-4669-AD3C-192DCEFC61F7}">
+                            <File Id="LocSatelliteDLL_pl" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="_-7y9ezp.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_pl" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_ru" Name="ru">
+                        <Component Id="LocSatelliteLib_ru" Guid="{E6ACA74E-3D0E-47D8-BF85-AC4925B89E5B}">
+                            <File Id="LocSatelliteDLL_ru" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="47qnyzwa.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_ru" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_ptBR" Name="pt-BR">
+                        <Component Id="LocSatelliteLib_ptBR" Guid="{6629C09A-05EE-4767-9DE4-E1B0BB9DA9D2}">
+                            <File Id="LocSatelliteDLL_ptBR" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="6jdfjpce.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_ptBR" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_it" Name="it">
+                        <Component Id="LocSatelliteLib_it" Guid="{400AD52C-59F0-48AE-A877-5BA8EF129260}">
+                            <File Id="LocSatelliteDLL_it" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="_-pgq3mf.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_it" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_tr" Name="tr">
+                        <Component Id="LocSatelliteLib_tr" Guid="{17425844-6683-4F51-A689-79AAF611D207}">
+                            <File Id="LocSatelliteDLL_tr" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="zk-_bmca.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_tr" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_uk" Name="uk">
+                        <Component Id="LocSatelliteLib_uk" Guid="{BFAA938B-3840-4A1E-8F4C-C728B7119BB3}">
+                            <File Id="LocSatelliteDLL_uk" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="a9_9qgco.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_uk" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="LOCDIR_zh" Name="zh">
+                        <Component Id="LocSatelliteLib_zh" Guid="{E6D09715-2015-413F-A78B-2D409B7993D3}">
+                            <File Id="LocSatelliteDLL_zh" Name="TinyWall.resources.dll" KeyPath="yes" ShortName="bk-6htzv.dll" Checksum="yes" Assembly=".net" AssemblyApplication="TinyWallEXE" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\LocSatelliteDLL_zh" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="DOCDIR" Name="doc">
+                        <Component Id="Attributions" Guid="{E47A6845-0241-438A-BBD8-B603451442D5}">
+                            <File Id="AttributionsTXT" Name="Attributions.txt" KeyPath="yes" ShortName="_0zko_th.txt" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\AttributionsTXT" />
+                        </Component>
+                        <Component Id="DocFAQComp" Guid="{4F664BA3-362F-5631-8818-E1DB62356218}">
+                            <File Id="DocFAQFile" Name="faq.html" KeyPath="yes" ShortName="skwsuhcl.htm" Checksum="yes" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\DocFAQFile" />
+                        </Component>
+                        <Directory Id="DOCCSSDIR" Name="css">
+                            <Component Id="DocCss00Comp" Guid="{64151FB9-1254-5FBB-B180-116EA83DCA11}">
+                                <File Id="DocCss00File" Name="1140.css" KeyPath="yes" Checksum="yes" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\DocCss00File" />
+                            </Component>
+                            <Component Id="DocCss02Comp" Guid="{8DACE8F9-950C-519A-B245-4F6E9768D4DF}">
+                                <File Id="DocCss02File" Name="style.css" KeyPath="yes" Checksum="yes" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\DocCss02File" />
+                            </Component>
+                        </Directory>
+                    </Directory>
+                </Directory>
+            </Directory>
+            <Directory Id="CommonAppDataFolder" Name="CommonAppData" ShortName="ykpqggg9">
+                <Directory Id="AppDataDir" Name="TinyWall">
+                    <Component Id="Database" Guid="{669B4911-0B8E-4AC6-8319-41511DF94626}">
+                        <File Id="DatabaseJson" Name="profiles.json" KeyPath="yes" ShortName="65lp6zfy.jso" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\DatabaseJson" />
+                    </Component>
+                    <Component Id="hosts" Guid="{6ED66053-6BAD-49EB-A99E-07674199289F}">
+                        <File Id="HostsCustom" Name="hosts.custom" KeyPath="yes" ShortName="ml77sbnh.cus" DiskId="1" Source="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\File\HostsCustom" />
+                    </Component>
+                    <Component Id="RemoveAppDataDir" Guid="{EE339191-7EC0-4F07-AF89-6527658FC9D7}" KeyPath="yes" Transitive="yes">
+                        <Condition>NOT OLDER_UPGRADEABLE_FOUND</Condition>
+                        <RemoveFile Id="AppDataDirFiles" Directory="AppDataDir" Name="*" On="install" />
+                        <RemoveFolder Id="AppDataDirFolder" Directory="AppDataDir" On="install" />
+                    </Component>
+                </Directory>
+            </Directory>
+            <Directory Id="ProgramMenuFolder" Name="Programs">
+                <Directory Id="ProgramMenuDir" Name="TinyWall">
+                    <Component Id="ProgramMenuDir" Guid="{14A26A5D-7F56-485F-98DE-9407F1E93F57}">
+                        <RegistryValue Id="reg68BC7963C86EE0474D39C7796AEDF77E" Root="HKCU" Key="Software\[ProductName]" Value="" Type="string" KeyPath="yes" />
+                        <RemoveFolder Id="ProgramMenuDir" Directory="ProgramMenuDir" On="uninstall" />
+                        <Shortcut Id="ControllerShortcut" Directory="ProgramMenuDir" Name="TinyWall Controller" ShortName="bv64bt6z" Icon="TinyWallIcon.exe" Advertise="yes">
+                            <ShortcutProperty Id="scp8B2BDB71B5239263F6F08F573B366E2C" Key="{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 5" Value="KPados.TinyWall.Controller" />
+                            <ShortcutProperty Id="scpA98546B16D2750F13A1D2367A324C722" Key="{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 12" Value="1" />
+                            <ShortcutProperty Id="scp6672D995AF31C6AB08346C6A636C8A5A" Key="{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 8" Value="1" />
+                        </Shortcut>
+                        <Shortcut Id="DevelToolShortcut" Directory="ProgramMenuDir" Name="TinyWall Dev Helper" ShortName="iiao7e2b" Arguments="/develtool" Icon="TinyWallIcon.exe" Advertise="yes">
+                            <ShortcutProperty Id="scp6B4006B6FA84D5DB5ECD648C7510611F" Key="{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 5" Value="KPados.TinyWall.DevelTool" />
+                            <ShortcutProperty Id="scpAAC4EDCB68D036194C51A55F259B0FB2" Key="{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 12" Value="1" />
+                            <ShortcutProperty Id="scp0C2E2F07732A4C233D2348FCE4AB6ED7" Key="{9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 8" Value="1" />
+                        </Shortcut>
+                        <Shortcut Id="FAQShortcut" Directory="ProgramMenuDir" Name="FAQ" Advertise="yes" />
+                        <InternetShortcut Id="WebsiteShortcut" Directory="ProgramMenuDir" Name="Website" Target="http://tinywall.pados.hu" Type="link" IconFile="" IconIndex="0" xmlns="http://schemas.microsoft.com/wix/UtilExtension" />
+                        <InternetShortcut Id="ReleaseNotesShortcut" Directory="ProgramMenuDir" Name="Release Notes" Target="https://raw.githubusercontent.com/pylorak/TinyWall/refs/heads/master/Changelog.txt" Type="link" IconFile="" IconIndex="0" xmlns="http://schemas.microsoft.com/wix/UtilExtension" />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="ProductFeature" ConfigurableDirectory="INSTALLDIR" Description="The complete package." Level="1" Title="Complete">
+            <ComponentRef Id="MainExecutable" Primary="yes" />
+            <ComponentRef Id="MainExecutableConfig" />
+            <ComponentRef Id="Microsoft_Bcl_AsyncInterfaces_Lib" Primary="yes" />
+            <ComponentRef Id="System_Buffers_Lib" Primary="yes" />
+            <ComponentRef Id="System_Memory_Lib" Primary="yes" />
+            <ComponentRef Id="System_Numerics_Vectors_Lib" Primary="yes" />
+            <ComponentRef Id="System_Runtime_CompilerServices_Unsafe_Lib" Primary="yes" />
+            <ComponentRef Id="System_Text_Encodings_Web_Lib" Primary="yes" />
+            <ComponentRef Id="System_Text_Json_Lib" Primary="yes" />
+            <ComponentRef Id="System_Threading_Tasks_Extensions_Lib" Primary="yes" />
+            <ComponentRef Id="System_ValueTuple_Lib" Primary="yes" />
+            <ComponentRef Id="License" />
+            <ComponentRef Id="LocSatelliteLib_bg" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_es" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_cs" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_heIL" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_hu" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_fr" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_ja" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_de" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_nl" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_ko" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_pl" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_ru" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_ptBR" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_it" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_tr" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_uk" Primary="yes" />
+            <ComponentRef Id="LocSatelliteLib_zh" Primary="yes" />
+            <ComponentRef Id="Attributions" />
+            <ComponentRef Id="DocFAQComp" />
+            <ComponentRef Id="DocCss00Comp" />
+            <ComponentRef Id="DocCss02Comp" />
+            <ComponentRef Id="Database" />
+            <ComponentRef Id="hosts" />
+            <ComponentRef Id="RemoveAppDataDir" />
+            <ComponentRef Id="ProgramMenuDir" />
+            <ComponentRef Id="RegistryKeys" />
+        </Feature>
+        <Icon Id="TinyWallIcon.exe" SourceFile="C:\Users\gesti\AppData\Local\Temp\opencode\msi_extract\Icon\TinyWallIcon.exe" />
+        <Media Id="1" Cabinet="cab1.cab" EmbedCab="yes" />
+        <Property Id="ALLUSERS" Value="1" />
+        <Property Id="ARPNOREPAIR" Value="yes" Secure="yes" />
+        <Property Id="ARPPRODUCTICON" Value="TinyWallIcon.exe" />
+        <Property Id="ARPCOMMENTS" Value="A non-intrusive firewall solution." />
+        <Property Id="ARPCONTACT" Value="Károly Pados" />
+        <Property Id="ARPURLINFOABOUT" Value="http://tinywall.pados.hu" />
+        <Property Id="MSIRESTARTMANAGERCONTROL" Value="Disable" />
+        <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="The default configuration of TinyWall is to block most programs. If an application is unable to access the network, remember to use one of the &quot;Whitelist by...&quot; options from the tray menu." />
+        <Property Id="NEWER_FOUND" Secure="yes" />
+        <Property Id="OLDER_INCOMPATIBLE_FOUND" Secure="yes" />
+        <Property Id="OLDER_UPGRADEABLE_FOUND" Secure="yes" />
+        <Property Id="SELF_FOUND" Secure="yes" />
+        <Property Id="WINDOWSBUILDNUMBER" Secure="yes">
+            <RegistrySearch Id="BuildNumberSearch" Root="HKLM" Key="SOFTWARE\Microsoft\Windows NT\CurrentVersion" Name="CurrentBuildNumber" Type="raw" />
+        </Property>
+        <Property Id="WIX_IS_NETFRAMEWORK_48_OR_LATER_INSTALLED" Secure="yes" />
+        <Property Id="WIXNETFX4RELEASEINSTALLED" Secure="yes" />
+        <UI>
+            <TextStyle Id="WarningFontStyle" FaceName="Tahoma" Size="8" Red="160" Green="0" Blue="110" />
+            <Dialog Id="CustomWelcomeDlg" X="50" Y="50" Width="370" Height="270" Title="[ProductName] 3.6.1 Setup">
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Property="WixUI_InstallMode" Value="Update">Installed AND PATCH</Publish>
+                    <Publish Event="NewDialog" Value="RemoteWarnDlg">NOT Installed</Publish>
+                    <Publish Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" Text="WixUI_Bmp_Dialog" TabSkip="no" Disabled="yes" />
+                <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="&amp;Back" TabSkip="no" Disabled="yes" />
+                <Control Id="Description" Type="Text" X="135" Y="80" Width="220" Height="60" Text="The Setup Wizard will install [ProductName] on your computer. Click Next to continue or Cancel to exit the Setup Wizard." TabSkip="yes" Transparent="yes" NoPrefix="yes">
+                    <Condition Action="show">NOT Installed OR NOT PATCH</Condition>
+                    <Condition Action="hide">Installed AND PATCH</Condition>
+                </Control>
+                <Control Id="Title" Type="Text" X="135" Y="20" Width="220" Height="60" Text="{\WixUI_Font_Bigger}Welcome to the [ProductName] Setup Wizard" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="PatchDescription" Type="Text" X="135" Y="80" Width="220" Height="60" Text="The Setup Wizard will update [ProductName] on your computer. Click Next to continue or Cancel to exit the Setup Wizard." TabSkip="yes" Transparent="yes" NoPrefix="yes">
+                    <Condition Action="show">Installed AND PATCH</Condition>
+                    <Condition Action="hide">NOT Installed OR NOT PATCH</Condition>
+                </Control>
+            </Dialog>
+            <Dialog Id="RemoteWarnDlg" X="50" Y="50" Width="370" Height="270" Title="[ProductName] Setup">
+                <Control Id="Back" Type="PushButton" X="180" Y="243" Width="56" Height="17" Text="&amp;Back" TabSkip="no">
+                    <Publish Event="NewDialog" Value="CustomWelcomeDlg">1</Publish>
+                </Control>
+                <Control Id="Next" Type="PushButton" X="236" Y="243" Width="56" Height="17" Text="&amp;Next" TabSkip="no" Default="yes">
+                    <Publish Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+                </Control>
+                <Control Id="Cancel" Type="PushButton" X="304" Y="243" Width="56" Height="17" Text="Cancel" TabSkip="no" Cancel="yes">
+                    <Publish Event="SpawnDialog" Value="CancelDlg">1</Publish>
+                </Control>
+                <Control Id="Bitmap" Type="Bitmap" X="0" Y="0" Width="370" Height="234" Text="WixUI_Bmp_Dialog" TabSkip="no" Disabled="yes" />
+                <Control Id="Title" Type="Text" X="135" Y="20" Width="220" Height="60" Text="{\WixUI_Font_Bigger}Remote Installations" TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="BottomLine" Type="Line" X="0" Y="234" Width="370" Height="0" TabSkip="yes" Disabled="yes" />
+                <Control Id="Description1" Type="Text" X="135" Y="80" Width="220" Height="60" Text="{\WarningFontStyle}TinyWall only allows network traffic that you have explicitly whitelisted AFTER installation." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="Description2" Type="Text" X="135" Y="120" Width="220" Height="60" Text="{\WarningFontStyle}To prevent locking yourself out of this machine, always install TinyWall locally, not over a remote connection." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+                <Control Id="Description3" Type="Text" X="135" Y="160" Width="220" Height="60" Text="{\WarningFontStyle}If you are not using a remote connection currently, please ignore this warning." TabSkip="yes" Transparent="yes" NoPrefix="yes" />
+            </Dialog>
+        </UI>
+        <UIRef Id="WixUI_Minimal" />
+        <Upgrade Id="{0D009F71-BB22-4962-AEE0-6D42FA952B84}">
+            <UpgradeVersion Maximum="3.0.0.0" Property="OLDER_INCOMPATIBLE_FOUND" OnlyDetect="yes" IncludeMinimum="yes" />
+            <UpgradeVersion Minimum="3.6.1.0" Property="NEWER_FOUND" OnlyDetect="yes" />
+            <UpgradeVersion Minimum="3.6.1.0" Maximum="3.6.1.0" Property="SELF_FOUND" OnlyDetect="yes" IncludeMinimum="yes" IncludeMaximum="yes" />
+            <UpgradeVersion Minimum="3.0.0.0" Maximum="3.6.1.0" Property="OLDER_UPGRADEABLE_FOUND" IncludeMinimum="yes" />
+        </Upgrade>
+        <InstallExecuteSequence>
+            <Custom Action="FoundIncompatibleVersion" After="FindRelatedProducts">OLDER_INCOMPATIBLE_FOUND</Custom>
+            <Custom Action="FoundNewerVersion" After="FoundIncompatibleVersion">NEWER_FOUND</Custom>
+            <Custom Action="SetARPINSTALLLOCATION" After="RemoveExistingProducts" />
+            <Custom Action="UninstallCustom" Before="UnpublishFeatures">REMOVE="ALL"</Custom>
+            <Custom Action="InstallCustomRollback" Before="InstallCustom">NOT Installed</Custom>
+            <Custom Action="InstallCustom" Before="StartController">NOT Installed</Custom>
+            <Custom Action="StartController" Before="StartControllerAndDetect">(NOT Installed) AND OLDER_UPGRADEABLE_FOUND</Custom>
+            <Custom Action="StartControllerAndDetect" Before="InstallFinalize">(NOT Installed) AND (NOT OLDER_UPGRADEABLE_FOUND)</Custom>
+            <RemoveExistingProducts After="InstallValidate">OLDER_UPGRADEABLE_FOUND</RemoveExistingProducts>
+        </InstallExecuteSequence>
+        <InstallUISequence>
+            <Custom Action="FoundNewerVersion" Sequence="26">NEWER_FOUND</Custom>
+            <Custom Action="FoundIncompatibleVersion" Sequence="27">OLDER_INCOMPATIBLE_FOUND</Custom>
+            <Show Dialog="CustomWelcomeDlg" Sequence="1296">NOT Installed OR PATCH</Show>
+            <LaunchConditions Sequence="100" />
+            <FindRelatedProducts Sequence="25" />
+            <ValidateProductID Sequence="700" />
+            <CostInitialize Sequence="800" />
+            <FileCost Sequence="900" />
+            <CostFinalize Sequence="1000" />
+            <ExecuteAction Sequence="1300" />
+        </InstallUISequence>
+    </Product>
+</Wix>

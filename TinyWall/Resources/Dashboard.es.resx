@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>Panel de TinyWall</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Resumen de actividad de red</value>
+  </data>
+  <data name="TrayMenuItem" xml:space="preserve">
+    <value>Panel</value>
+  </data>
+  <data name="BtnConnections" xml:space="preserve">
+    <value>Conexiones</value>
+  </data>
+  <data name="BtnManage" xml:space="preserve">
+    <value>Administrar</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="TrafficTitle" xml:space="preserve">
+    <value>Tráfico de red</value>
+  </data>
+  <data name="LegendIn" xml:space="preserve">
+    <value>Descarga</value>
+  </data>
+  <data name="LegendOut" xml:space="preserve">
+    <value>Subida</value>
+  </data>
+  <data name="RangeMinute" xml:space="preserve">
+    <value>1 min</value>
+  </data>
+  <data name="Range5Minutes" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="Range30Minutes" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="RangeHour" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="WaitingForData" xml:space="preserve">
+    <value>Esperando datos de tráfico...</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>ahora</value>
+  </data>
+  <data name="TileDownload" xml:space="preserve">
+    <value>Velocidad de descarga</value>
+  </data>
+  <data name="TileUpload" xml:space="preserve">
+    <value>Velocidad de subida</value>
+  </data>
+  <data name="TileSession" xml:space="preserve">
+    <value>Datos de la sesión</value>
+  </data>
+  <data name="TileSessionDetail" xml:space="preserve">
+    <value>↓ {0}   ↑ {1}</value>
+  </data>
+  <data name="TileBlocked" xml:space="preserve">
+    <value>Intentos bloqueados (5 min)</value>
+  </data>
+  <data name="TileBlockedDetail" xml:space="preserve">
+    <value>{0} aplicaciones afectadas</value>
+  </data>
+  <data name="TileBlockedDetailOne" xml:space="preserve">
+    <value>{0} aplicación afectada</value>
+  </data>
+  <data name="TileNoValue" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="AppsTitle" xml:space="preserve">
+    <value>Aplicaciones activas</value>
+  </data>
+  <data name="AppConnection" xml:space="preserve">
+    <value>{0} conexión</value>
+  </data>
+  <data name="AppConnections" xml:space="preserve">
+    <value>{0} conexiones</value>
+  </data>
+  <data name="AppBlockedSuffix" xml:space="preserve">
+    <value>  |  {0} bloqueos</value>
+  </data>
+  <data name="NoApps" xml:space="preserve">
+    <value>Sin conexiones activas</value>
+  </data>
+  <data name="EventsTitle" xml:space="preserve">
+    <value>Eventos del firewall</value>
+  </data>
+  <data name="EventBlocked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="EventAllowed" xml:space="preserve">
+    <value>Permitido</value>
+  </data>
+  <data name="NoEvents" xml:space="preserve">
+    <value>Sin eventos recientes</value>
+  </data>
+  <data name="SystemApp" xml:space="preserve">
+    <value>Sistema</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>Desconocido (PID {0})</value>
+  </data>
+  <data name="WidgetTrayMenuItem" xml:space="preserve">
+    <value>Widget flotante</value>
+  </data>
+  <data name="WidgetTitle" xml:space="preserve">
+    <value>Tráfico</value>
+  </data>
+  <data name="WidgetAppsOnline" xml:space="preserve">
+    <value>{0} aplicaciones con acceso a Internet</value>
+  </data>
+  <data name="WidgetAppsOnlineOne" xml:space="preserve">
+    <value>{0} aplicación con acceso a Internet</value>
+  </data>
+  <data name="WidgetAppsTooltip" xml:space="preserve">
+    <value>{0} aplicaciones con conexiones a Internet activas. Haz clic para ver los detalles.</value>
+  </data>
+  <data name="WidgetOpenPanel" xml:space="preserve">
+    <value>Abrir panel</value>
+  </data>
+  <data name="WidgetRange" xml:space="preserve">
+    <value>Rango de tiempo</value>
+  </data>
+  <data name="WidgetOpacity" xml:space="preserve">
+    <value>Opacidad</value>
+  </data>
+  <data name="WidgetClose" xml:space="preserve">
+    <value>Cerrar widget</value>
+  </data>
+  <data name="WidgetTooltip" xml:space="preserve">
+    <value>Sesión: ↓ {0}, ↑ {1}. Arrastra la barra superior para mover, Ctrl+rueda para cambiar la opacidad.</value>
+  </data>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="$this.Text" xml:space="preserve"><value>设置通配符模式 - TinyWall</value></data>
+  <data name="lblOriginalPath.Text" xml:space="preserve"><value>原始路径：</value></data>
+  <data name="lblPattern.Text" xml:space="preserve"><value>通配符模式：</value></data>
+  <data name="lblHints.Text" xml:space="preserve"><value>说明：
+- 允许的通配符：?（单个字符）和 *（多个字符）
+- 通配符不能匹配目录分隔符。
+- 位于 Program Files 之外的文件必须经过数字签名，才能与通配符模式匹配。
+- 模式必须表示本地计算机上的绝对文件路径。</value></data>
+  <data name="btnCancel.Text" xml:space="preserve"><value>取消</value></data>
+</root>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader><resheader name="version"><value>2.0</value></resheader><resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader><resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="$this.Text" xml:space="preserve"><value>Настройка шаблона с подстановочными знаками - TinyWall</value></data>
+  <data name="lblOriginalPath.Text" xml:space="preserve"><value>Исходный путь:</value></data>
+  <data name="lblPattern.Text" xml:space="preserve"><value>Шаблон с подстановочными знаками:</value></data>
+  <data name="lblHints.Text" xml:space="preserve"><value>Примечания:
+- Допустимые подстановочные знаки: ? (один символ) и * (несколько символов)
+- Подстановочные знаки не могут соответствовать разделителям каталогов.
+- Файлы за пределами Program Files, соответствующие шаблонам с подстановочными знаками, должны иметь цифровую подпись.
+- Шаблон должен представлять абсолютный путь к файлу на локальном компьютере.</value></data>
+  <data name="btnCancel.Text" xml:space="preserve"><value>Отмена</value></data>
+</root>

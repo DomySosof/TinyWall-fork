@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>TinyWall Dashboard</value>
+  </data>
+  <data name="Subtitle" xml:space="preserve">
+    <value>Network activity overview</value>
+  </data>
+  <data name="TrayMenuItem" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="BtnConnections" xml:space="preserve">
+    <value>Connections</value>
+  </data>
+  <data name="BtnManage" xml:space="preserve">
+    <value>Manage</value>
+  </data>
+  <data name="Locked" xml:space="preserve">
+    <value>Locked</value>
+  </data>
+  <data name="TrafficTitle" xml:space="preserve">
+    <value>Network traffic</value>
+  </data>
+  <data name="LegendIn" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="LegendOut" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="RangeMinute" xml:space="preserve">
+    <value>1 min</value>
+  </data>
+  <data name="Range5Minutes" xml:space="preserve">
+    <value>5 min</value>
+  </data>
+  <data name="Range30Minutes" xml:space="preserve">
+    <value>30 min</value>
+  </data>
+  <data name="RangeHour" xml:space="preserve">
+    <value>1 h</value>
+  </data>
+  <data name="WaitingForData" xml:space="preserve">
+    <value>Waiting for traffic data...</value>
+  </data>
+  <data name="Now" xml:space="preserve">
+    <value>now</value>
+  </data>
+  <data name="TileDownload" xml:space="preserve">
+    <value>Download speed</value>
+  </data>
+  <data name="TileUpload" xml:space="preserve">
+    <value>Upload speed</value>
+  </data>
+  <data name="TileSession" xml:space="preserve">
+    <value>Data this session</value>
+  </data>
+  <data name="TileSessionDetail" xml:space="preserve">
+    <value>↓ {0}   ↑ {1}</value>
+  </data>
+  <data name="TileBlocked" xml:space="preserve">
+    <value>Blocked attempts (5 min)</value>
+  </data>
+  <data name="TileBlockedDetail" xml:space="preserve">
+    <value>{0} apps affected</value>
+  </data>
+  <data name="TileBlockedDetailOne" xml:space="preserve">
+    <value>{0} app affected</value>
+  </data>
+  <data name="TileNoValue" xml:space="preserve">
+    <value>--</value>
+  </data>
+  <data name="AppsTitle" xml:space="preserve">
+    <value>Active applications</value>
+  </data>
+  <data name="AppConnection" xml:space="preserve">
+    <value>{0} connection</value>
+  </data>
+  <data name="AppConnections" xml:space="preserve">
+    <value>{0} connections</value>
+  </data>
+  <data name="AppBlockedSuffix" xml:space="preserve">
+    <value>  |  {0} blocked</value>
+  </data>
+  <data name="NoApps" xml:space="preserve">
+    <value>No active connections</value>
+  </data>
+  <data name="EventsTitle" xml:space="preserve">
+    <value>Firewall events</value>
+  </data>
+  <data name="EventBlocked" xml:space="preserve">
+    <value>Blocked</value>
+  </data>
+  <data name="EventAllowed" xml:space="preserve">
+    <value>Allowed</value>
+  </data>
+  <data name="NoEvents" xml:space="preserve">
+    <value>No recent events</value>
+  </data>
+  <data name="SystemApp" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="UnknownApp" xml:space="preserve">
+    <value>Unknown (PID {0})</value>
+  </data>
+  <data name="WidgetTrayMenuItem" xml:space="preserve">
+    <value>Floating widget</value>
+  </data>
+  <data name="WidgetTitle" xml:space="preserve">
+    <value>Traffic</value>
+  </data>
+  <data name="WidgetAppsOnline" xml:space="preserve">
+    <value>{0} apps with Internet access</value>
+  </data>
+  <data name="WidgetAppsOnlineOne" xml:space="preserve">
+    <value>{0} app with Internet access</value>
+  </data>
+  <data name="WidgetAppsTooltip" xml:space="preserve">
+    <value>{0} apps with active Internet connections. Click to see the details.</value>
+  </data>
+  <data name="WidgetOpenPanel" xml:space="preserve">
+    <value>Open dashboard</value>
+  </data>
+  <data name="WidgetRange" xml:space="preserve">
+    <value>Time range</value>
+  </data>
+  <data name="WidgetOpacity" xml:space="preserve">
+    <value>Opacity</value>
+  </data>
+  <data name="WidgetClose" xml:space="preserve">
+    <value>Close widget</value>
+  </data>
+  <data name="WidgetTooltip" xml:space="preserve">
+    <value>Session: down {0}, up {1}. Drag the title bar to move, Ctrl+wheel to change opacity.</value>
+  </data>
+</root>
